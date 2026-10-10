@@ -1,0 +1,15 @@
+# Dane rastrowe, wektorowe i archiwa
+*.tif
+*.tiff
+*.zip
+*.tar.gz
+Browser_images/
+
+# Pliki pomocnicze i projekty QGIS
+*.qgz
+*.qgz~
+*.aux.xml
+
+# Pliki systemowe
+.DS_Store
+Thumbs.db
