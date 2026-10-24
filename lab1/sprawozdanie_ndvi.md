@@ -1,8 +1,8 @@
 # Sprawozdanie z ćwiczenia: Obliczanie i wizualizacja wskaźnika wegetacji NDVI w programie QGIS
 
-**Autor:** Tomasz Broda  
-**Data wykonania:** 10 października 2026 r.  
-**Obszar opracowania:** Mierzeja jeziora Jamno / Mielno–Unieście  
+**Autor:** Tomasz Broda
+**Data wykonania:** 10 października 2026 r.
+**Obszar opracowania:** Mierzeja jeziora Jamno / Mielno–Unieście
 **Dane satelitarne:** Sentinel-2 L2A (scena z dnia 01.10.2026 r.)
 
 ---
@@ -22,7 +22,7 @@ Celem zadania było:
 
 W serwisie [Copernicus Browser](https://browser.dataspace.copernicus.eu/) zdefiniowano poligon badawczy (AOI) obejmujący mierzeję odcinającą jezioro Jamno od Morza Bałtyckiego (powierzchnia ok. 16,46 km²). Wybrano bezchmurne zobrazowanie z kolekcji **Sentinel-2 L2A** zarejestrowane w dniu **01.10.2026 r.**
 
-![Zdefiniowanie obszaru zainteresowania (AOI)](screens/Screenshot%202026-10-10%20at%2016.45.56.png)
+![Zdefiniowanie obszaru zainteresowania (AOI)](screenshots/Screenshot%202026-10-10%20at%2016.45.56.png)
 
 _Rysunek 1. Wybór obszaru badawczego (Mielno / jezioro Jamno) w Copernicus Browser._
 
@@ -36,13 +36,13 @@ W module pobierania (**Analytical**) skonfigurowano parametry eksportu:
   - Kanał bliskiej podczerwieni: **B08** (842 nm, rozdzielczość 10 m),
   - Warstwa referencyjna **True color** oraz podgląd gotowego indeksu **NDVI**.
 
-![Parametry pobierania danych w Copernicus Browser](screens/Screenshot%202026-10-10%20at%2016.46.13.png)
+![Parametry pobierania danych w Copernicus Browser](screenshots/Screenshot%202026-10-10%20at%2016.46.13.png)
 
 _Rysunek 2. Konfiguracja eksportu pasm spektralnych w zakładce Analytical._
 
 Pobrane pliki rastrowe zapisano na dysku w katalogu roboczym.
 
-![Pobrane pliki rastrowe](screens/Screenshot%202026-10-10%20at%2016.46.30.png)
+![Pobrane pliki rastrowe](screenshots/Screenshot%202026-10-10%20at%2016.46.30.png)
 
 _Rysunek 3. Pobrane kanały GeoTIFF w folderze projektowym._
 
@@ -63,7 +63,7 @@ W kalkulatorze wprowadzono wyrażenie:
 
 Plik wynikowy zapisano w formacie **GeoTIFF** pod nazwą roboczą na dysku, zachowując zasięg i rozdzielczość pasm wejściowych.
 
-![Obliczenie NDVI w kalkulatorze rastrów QGIS](screens/Screenshot%202026-10-10%20at%2016.48.27.png)
+![Obliczenie NDVI w kalkulatorze rastrów QGIS](screenshots/Screenshot%202026-10-10%20at%2016.48.27.png)
 
 _Rysunek 4. Konfiguracja wyrażenia rastrowego w Raster Calculator._
 
@@ -73,7 +73,7 @@ _Rysunek 4. Konfiguracja wyrażenia rastrowego w Raster Calculator._
 
 Po wygenerowaniu warstwy wskaźnika NDVI uzyskano surowy raster monochromatyczny. Wartości wskaźnika mieszczą się w teoretycznym zakresie od -1,0 do +1,0.
 
-![Surowy raster wynikowy NDVI](screens/Screenshot%202026-10-10%20at%2017.24.15.png)
+![Surowy raster wynikowy NDVI](screenshots/Screenshot%202026-10-10%20at%2017.24.15.png)
 
 _Rysunek 5. Surowy raster NDVI w skali szarości na tle mapy bazowej._
 
@@ -84,13 +84,13 @@ Warstwę ostylowano za pomocą trybu **Singleband pseudocolor (Jednokanałowy ps
 - **Wartości ujemne i bliskie zera (odcienie czerwieni):** akweny wodne (Bałtyk, jezioro Jamno), plaża, piasek oraz tereny gęsto zurbanizowane.
 - **Wartości wysokie powyżej 0,6–0,8 (odcienie zieleni):** tereny porośnięte bujną, zdrową roślinnością, lasy nadmorskie oraz pola uprawne.
 
-![Wizualizacja NDVI w palecie barwnej](screens/Screenshot%202026-10-10%20at%2017.24.25.png)
+![Wizualizacja NDVI w palecie barwnej](screenshots/Screenshot%202026-10-10%20at%2017.24.25.png)
 
 _Rysunek 6. Wizualizacja wskaźnika NDVI w palecie barwnej._
 
 Dla celów weryfikacji i porównania wczytano również warstwę **True Color** (kompozycja naturalna), która potwierdza poprawność detekcji szaty roślinnej na mierzei i terenach przyległych.
 
-![Kompozycja w barwach rzeczywistych (True Color)](screens/Screenshot%202026-10-10%20at%2016.49.43.png)
+![Kompozycja w barwach rzeczywistych (True Color)](screenshots/Screenshot%202026-10-10%20at%2016.49.43.png)
 
 _Rysunek 7. Porównanie z kompozycją w barwach naturalnych (True Color)._
 
