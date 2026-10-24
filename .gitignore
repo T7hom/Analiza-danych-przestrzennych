@@ -13,3 +13,13 @@ Browser_images/
 # Pliki systemowe
 .DS_Store
 Thumbs.db
+
+# Środowiska wirtualne Pythona i pamięć podręczna
+.venv/
+.lab-geo/
+__pycache__/
+*.pyc
+
+# Notatniki Jupyter
+.ipynb_checkpoints/
+
